@@ -1,0 +1,31 @@
+基于SSM+MYSQL写的javaWeb房屋租赁管理系统，包括系统前端和后台，页面美观，功能完善，非常高端的毕业设计
+房屋租赁管理系统 技术SSM+MYSQL
+用户测试登录账号 tianming  tianming
+也可以自己注册账号信息（建议在注册几个用户）
+管理员测试账号  admin   123456
+数据库每个表都有详细注释
+代码也有详细注释（详细说明）
+前段使用技术：html+JavaScript+css+layui+jQuery
+
+网站前端：http://localhost:8080/HouseRentalSystem/
+网站后台:http://localhost:8080/HouseRentalSystem/toAdminLogin
+开发工具 IDEA
+数据库使用mysql数据库
+
+
+
+基于layui+SSM写的毕业设计房屋租赁管理系统,系统界面仿Q房网UI进行排版。后台管理界面使用的layui自带后台管理样式。
+后端语言使用的目前主流的Spring+SpringMvc+Mybatis框架。实现了一系列基本的增删改查和权限控制功能。
+
+【详细功能设计：】
+房屋信息展示
+房屋详情页面展示
+用户登录注册
+用户发布房源信息
+用户管理自己发布的所有房源信息
+修改密码
+
+
+管理员登录
+管理员发布房源信息
+管理员管理所有用户信息

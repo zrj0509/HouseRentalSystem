@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.house.dao.LiuyanMapper">
+    <!-- 注册 -->
+    <insert id="save" parameterType="com.house.entity.Liuyan">
+		INSERT INTO  liuyan(
+			id,
+			username,
+			content,
+			hid,
+			hname,
+			remarker,
+			createtime) VALUES (
+			#{id},
+			#{username},
+			#{content},
+			#{hid},
+			#{hname},
+			#{remarker},
+			#{createtime}
+				)
+	</insert>
+
+
+    <update id="update" parameterType="com.house.entity.Liuyan">
+        UPDATE liuyan
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="hid != null and hid != ''">
+                hid = #{hid},
+            </if>
+            <if test="hname != null and hname != ''">
+                hname = #{hname},
+            </if>
+            <if test="remarker != null and remarker != ''">
+                remarker = #{remarker},
+            </if>
+            <if test="createtime != null and createtime != ''">
+                createtime = #{createtime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM liuyan WHERE id  = #{id}
+    </delete>
+    <select id="findID" parameterType="int" resultType="com.house.entity.Liuyan">
+        SELECT  *  FROM liuyan where id=#{id}
+    </select>
+
+    <select id="findAll" parameterType="map" resultType="com.house.entity.Liuyan">
+        SELECT * FROM liuyan
+        <where>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>
